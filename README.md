@@ -1,15 +1,15 @@
 # Virtual Pet
 
-This repository is aimed at covering the basics of Object Oriented Programming (OOP)in JavaScript by building a virtual pet.
+This repository is aimed at covering the basics of Object Oriented Programming (OOP)in JavaScript by building a virtual pet.    
 
 ## Objectives
 
 - Setting up a new project repository
-- Defining a constructor function
-- setting properties of objects using constructors
-- Using this
-- definining methods as a function and using objects prototype
-- write unit test behaviour in Node CLI
+- Using a constructor function
+- Setting properties of objects using constructors
+- Using .this method
+- Definining methods as a function and using objects prototype
+- Write unit test behaviour in Node CLI
 - Adding guard clauses to prevent misuse of a function
 - Throwing exceptions and checking errors
 
