@@ -2,17 +2,19 @@
 const MAXIMUM_FITNESS = 10;
 const MINIMUM_AGE = 0;
 const MINIMUM_HUNGER = 0;
+
   
+
   function Pet(name) {
     //this.name = name, this refers to the object returned from by calling new Pet(), 
    //so this.name refers to the name property of that object.
     this.name = name;
     this.age = MINIMUM_AGE;
     this.hunger = MINIMUM_HUNGER;
-    this.fitness = MAXIMUM_FITNESS;
+    this.fitness = MAXIMUM_FITNESS; 
   }
   
-  // OBJECTS PROTOTYPE
+  // Object Prototype
   Pet.prototype.growUp = function() {
     this.age += 1;
     this.hunger += 5;

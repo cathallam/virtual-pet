@@ -75,4 +75,21 @@ describe('constructor', () => {
           expect(pet.fitness).toEqual(MAXIMUM_FITNESS);
         });
       });
-      
+
+      describe('feed', () => {
+        it('decreases hunger by 3', () =>{
+          const pet = new Pet('Fido');
+          pet.hunger = 9;
+          pet.feed();
+          expect(pet.hunger).toEqual(6);
+        });
+      });
+
+      describe('feed', () => {
+        it('decreases hunger to a minimum of 0', () => {
+          const pet = new Pet('Fido');
+          pet.hunger = 3;
+          pet.feed();
+          expect(pet.hunger).toEqual(0);
+        });
+      });
