@@ -8,7 +8,7 @@ const MINIMUM_HUNGER = 0;
     this.age = MINIMUM_AGE;
     this.hunger = MINIMUM_HUNGER;
     this.fitness = MAXIMUM_FITNESS; 
-  }
+  };
   
   Pet.prototype = {
     get isAlive() {
