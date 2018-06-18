@@ -1,5 +1,5 @@
 const Pet = require('../src/pet'); 
-
+const MAXIMUM_FITNESS = 10;
 
 describe('constructor', () => {
     it('returns an object', () => {
@@ -43,7 +43,7 @@ describe('constructor', () => {
   });  
 
     describe('growUp', () => {
-        it('increments the hunger by 5', () => {
+        it('increments hunger by 5', () => {
           const pet = new Pet('Fido');
           pet.growUp();
           expect(pet.hunger).toEqual(5);
@@ -51,9 +51,28 @@ describe('constructor', () => {
       });
     
       describe('growUp', () => {
-        it('decrements the fitness by 3', () => {
+        it('decrements fitness by 3', () => {
           const pet = new Pet('Fido');
           pet.growUp();
           expect(pet.fitness).toEqual(7);
         });
       });
+
+      describe('walk', () => {
+        it('increases fitness by 4', () => {
+          const pet = new Pet('fido');
+          pet.fitness = 4;
+          pet.walk();
+          expect(pet.fitness).toEqual(8);
+        });
+      });
+
+      describe('walk', () => {
+        it('increases fitness by to a maximum of 10', () => {
+          const pet = new Pet('fido');
+          pet.fitness = 8;
+          pet.walk();
+          expect(pet.fitness).toEqual(MAXIMUM_FITNESS);
+        });
+      });
+      
